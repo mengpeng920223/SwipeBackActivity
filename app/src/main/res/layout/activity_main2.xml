@@ -8,9 +8,11 @@
     tools:context="com.mengpeng.swipebackactivity.Main2Activity">
 
     <TextView
+        android:id="@+id/aa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:onClick="onClick"
         android:padding="30dp"
         android:text="第三页" />
 

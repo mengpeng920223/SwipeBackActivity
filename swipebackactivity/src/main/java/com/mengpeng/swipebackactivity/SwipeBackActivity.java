@@ -3,15 +3,13 @@ package com.mengpeng.swipebackactivity;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class SwipeBackActivity extends AppCompatActivity implements SwipeBackActivityBase {
+public class SwipeBackActivity extends BaseSwipeActivity implements SwipeBackActivityBase {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Utils.setStatusBar(this, 0);
         mHelper = new SwipeBackActivityHelper(this);
         mHelper.onActivityCreate();
     }
