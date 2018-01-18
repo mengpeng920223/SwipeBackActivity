@@ -13,8 +13,6 @@ public interface SwipeBackActivityBase {
 
     public abstract void setSwipeBackEnable(boolean enable);
 
-    public abstract void setStatusBarCorlor(Activity activity, int colorId);
-
     public abstract void scrollToFinishActivity();
 
 }

@@ -1,6 +1,5 @@
 package com.mengpeng.swipebackactivity;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -41,13 +40,8 @@ public class SwipeBackActivity extends BaseSwipeActivity implements SwipeBackAct
     }
 
     @Override
-    public void setStatusBarCorlor(Activity activity, int colorId) {
-        Utils.setStatusBar(activity, colorId);
-    }
-
-    @Override
     public void scrollToFinishActivity() {
-        Utils.convertActivityToTranslucent(this);
+        StatusBarUtils.convertActivityToTranslucent(this);
         getSwipeBackLayout().scrollToFinishActivity();
     }
 

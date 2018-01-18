@@ -21,7 +21,7 @@ public class BaseSwipeActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base_swipe);
-        Utils.fullScreen(this);
+        StatusBarUtils.fullScreen(this);
 
 
         title_layout = findViewById(R.id.title_layout);
@@ -29,7 +29,7 @@ public class BaseSwipeActivity extends AppCompatActivity {
 
         base_status_bar.setBackgroundColor(Color.parseColor("#33ff00ff"));
 
-        base_status_bar.setHeight(Utils.getStatusBarHeight(this));
+        base_status_bar.setHeight(StatusBarUtils.getStatusBarHeight(this));
 
     }
 
@@ -53,7 +53,7 @@ public class BaseSwipeActivity extends AppCompatActivity {
      */
     public void isShowStatusBar(boolean isShow) {
         if (isShow) {
-            base_status_bar.setHeight(Utils.getStatusBarHeight(this));
+            base_status_bar.setHeight(StatusBarUtils.getStatusBarHeight(this));
         } else {
             base_status_bar.setHeight(0);
         }

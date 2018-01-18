@@ -35,7 +35,7 @@ class SwipeBackActivityHelper {
 
             @Override
             public void onEdgeTouch(int edgeFlag) {
-                Utils.convertActivityToTranslucent(mActivity);
+                StatusBarUtils.convertActivityToTranslucent(mActivity);
             }
 
             @Override
