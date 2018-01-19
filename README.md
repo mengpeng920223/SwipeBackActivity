@@ -19,6 +19,25 @@ dependencies {
 
 ### Step 3. 只需要把你的BaseActivity继承SwipeBackActivity即可完成左滑返回功能
 
+### Step 4. 修改订单文件中主题
+```
+  <style name="AppTheme.Activity.Translucent.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/anim_activity</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <!-- 设置背景透明，右滑时才能看到上一个界面，否则会看到黑屏效果-->
+        <item name="android:windowIsTranslucent">true</item>
+  </style>
+ 
+  最主要的是：
+  <!-- 设置背景透明，右滑时才能看到上一个界面，否则会看到黑屏效果-->
+  <item name="android:windowIsTranslucent">true</item>
+  或者让自己的style继承AppTheme.Activity.Translucent.NoActionBar
+
+```
+
 v1.1.0
 - 适配沉浸式左滑返回
 - 增加修改状态栏字体颜色方法
