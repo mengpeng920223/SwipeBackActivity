@@ -2,6 +2,7 @@ package com.mengpeng.swipebackactivity;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -23,13 +24,16 @@ public class BaseSwipeActivity extends AppCompatActivity {
         super.setContentView(R.layout.activity_base_swipe);
         StatusBarUtils.fullScreen(this);
 
-
         title_layout = findViewById(R.id.title_layout);
         base_status_bar = findViewById(R.id.base_status_bar);
 
-        base_status_bar.setBackgroundColor(Color.parseColor("#33ff00ff"));
+        base_status_bar.setBackgroundColor(Color.parseColor("#ffffff"));
 
         base_status_bar.setHeight(StatusBarUtils.getStatusBarHeight(this));
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+            base_status_bar.setVisibility(View.GONE);
+        }
 
     }
 
@@ -43,7 +47,11 @@ public class BaseSwipeActivity extends AppCompatActivity {
      * @param color 状态栏的颜色
      */
     public void setStatusBarColor(String color) {
-        base_status_bar.setBackgroundColor(Color.parseColor(color));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            base_status_bar.setBackgroundColor(Color.parseColor(color));
+        } else {
+            base_status_bar.setVisibility(View.GONE);
+        }
     }
 
     /**
