@@ -13,7 +13,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```
 dependencies {
-    compile 'com.github.mengpeng920223:SwipeBackActivity:v1.1.0'
+    compile 'com.github.mengpeng920223:SwipeBackActivity:v1.1.1'
 }
 ```
 
