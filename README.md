@@ -16,3 +16,21 @@ dependencies {
     compile 'com.github.mengpeng920223:SwipeBackActivity:v1.1.0'
 }
 ```
+
+### Step 3. 只需要把你的BaseActivity继承SwipeBackActivity即可完成左滑返回功能
+
+v1.1.0
+- 适配沉浸式左滑返回
+- 增加修改状态栏字体颜色方法
+```
+ //修改状态栏颜色，沉浸式
+ //全局设置时在BaseActivity中的onCreate
+ //单独修改时在当前的activity中的onCreate
+ setStatusBarColor("#33ff0000");
+ 
+ //设置状态栏字体颜色
+ StatusBarUtils.setStatusBarLightMode(this);
+ or
+ StatusBarUtils.setStatusBarDarkMode(this);
+
+```
