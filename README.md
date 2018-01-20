@@ -1,6 +1,4 @@
-# SwipeBackActivity
-Android最简单最便捷的快速集成左滑返回
-
+## SwipeBackActivity Android最简单最便捷的快速集成左滑返回
 
 ### Step1:Add the JitPack repository to your build file
 ```
@@ -19,26 +17,25 @@ dependencies {
 
 ### Step 3. 只需要把你的BaseActivity继承SwipeBackActivity即可完成左滑返回功能
 
-### Step 4. 修改订单文件中主题
 ```
-  <style name="AppTheme.Activity.Translucent.NoActionBar" parent="AppTheme">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorPrimaryDark">@color/white</item>
-        <item name="android:windowAnimationStyle">@style/anim_activity</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
-        <!-- 设置背景透明，右滑时才能看到上一个界面，否则会看到黑屏效果-->
-        <item name="android:windowIsTranslucent">true</item>
+ 如果不需要左滑返回只需在当前activity的onCreate()中设置一下即可
+ //设置此页面不可左滑返回
+ setSwipeBackEnable(false) 
+```
+
+### Step 4. 修改清单文件中主题
+```
+  让自己的style继承AppTheme.Activity.Translucent.NoActionBar
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="AppTheme.Activity.Translucent.NoActionBar">
+     <!-- Customize your theme here. -->
+     <item name="colorPrimary">@color/colorPrimary</item>
+     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+     <item name="colorAccent">@color/colorAccent</item>
   </style>
- 
-  最主要的是：
-  <!-- 设置背景透明，右滑时才能看到上一个界面，否则会看到黑屏效果-->
-  <item name="android:windowIsTranslucent">true</item>
-  或者让自己的style继承AppTheme.Activity.Translucent.NoActionBar
 
 ```
 
-v1.1.0
 - 适配沉浸式左滑返回
 - 增加修改状态栏字体颜色方法
 ```
@@ -51,5 +48,4 @@ v1.1.0
  StatusBarUtils.setStatusBarLightMode(this);
  or
  StatusBarUtils.setStatusBarDarkMode(this);
-
 ```
