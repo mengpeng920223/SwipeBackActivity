@@ -7,7 +7,7 @@ import android.app.Activity;
  * 日期:  2017/5/22 , 上午11:52.
  * 作用:
  */
-public interface SwipeBackActivityBase {
+public interface SwipeBackInterface {
 
     public abstract SwipeBackLayout getSwipeBackLayout();
 

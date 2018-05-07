@@ -11,8 +11,4 @@ public class Main2Activity extends BaseActivity {
         setContentView(R.layout.activity_main2);
         findViewById(R.id.aa);
     }
-
-    public void onClick(View view) {
-        setStatusBarColor("#330000ff");
-    }
 }
