@@ -5,6 +5,12 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application>
         <activity
+            android:name=".SwipeBackAppCompatActivity"
+            android:theme="@style/AppTheme.Activity.Translucent.NoActionBar" />
+        <activity
+            android:name=".SwipeBackFragmentActivity"
+            android:theme="@style/AppTheme.Activity.Translucent.NoActionBar" />
+        <activity
             android:name=".SwipeBackActivity"
             android:theme="@style/AppTheme.Activity.Translucent.NoActionBar" />
     </application>

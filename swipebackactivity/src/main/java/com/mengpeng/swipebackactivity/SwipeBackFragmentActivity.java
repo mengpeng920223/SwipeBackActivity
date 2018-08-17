@@ -1,11 +1,11 @@
 package com.mengpeng.swipebackactivity;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
-public class SwipeBackActivity extends Activity implements SwipeBackInterface {
+public class SwipeBackFragmentActivity extends FragmentActivity implements SwipeBackInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
