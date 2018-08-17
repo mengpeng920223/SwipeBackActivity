@@ -114,7 +114,6 @@ public class StatusBarUtils {
     public static void setStatusBarLightMode(Activity activity) {
         // 1:MIUUI 2:Flyme 3:android6.0
         int type = getUIMode(activity);
-
         if (type == 1) {
             MIUISetStatusBarLightMode(activity, true);
         } else if (type == 2) {
@@ -122,7 +121,6 @@ public class StatusBarUtils {
         } else if (type == 3) {
             activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
-
     }
 
     /**
@@ -131,7 +129,6 @@ public class StatusBarUtils {
     public static void setStatusBarDarkMode(Activity activity) {
         fullScreen(activity);
     }
-
 
     /**
      * 设置状态栏图标为深色和魅族特定的文字风格
@@ -163,7 +160,7 @@ public class StatusBarUtils {
                 window.setAttributes(lp);
                 result = true;
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
         return result;

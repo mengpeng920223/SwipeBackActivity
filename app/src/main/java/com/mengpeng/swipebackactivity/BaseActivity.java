@@ -2,7 +2,7 @@ package com.mengpeng.swipebackactivity;
 
 import android.os.Bundle;
 
-public class BaseActivity extends SwipeBackAppCompatActivity {
+public class BaseActivity extends SwipeBackFragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
